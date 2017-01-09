@@ -1,0 +1,23 @@
+init_tasks:
+ - command: sudo docker-compose up -d
+
+watchers:
+ - extension: go
+   tasks:
+    - command: ./build-go.sh users
+    - command: notify-send --urgency=low Users Restarted
+   directory: users
+   excludes:
+    - users/vendor/*
+ - extension: go
+   tasks:
+    - command: ./build-go.sh posts
+    - command: notify-send --urgency=low Posts Restarted
+   directory: posts
+   excludes:
+    - posts/vendor/*
+ - extension: rs
+   tasks:
+    - command: ./build-rs.sh auth
+    - command: notify-send --urgency=low Auth Restarted
+   directory: auth

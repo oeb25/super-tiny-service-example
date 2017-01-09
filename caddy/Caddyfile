@@ -1,0 +1,17 @@
+localhost:80
+
+log stdout
+
+tls off
+
+proxy /users users {
+    without /users
+}
+
+proxy /posts posts {
+    without /posts
+}
+
+proxy /auth auth {
+    without /auth
+}

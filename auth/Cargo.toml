@@ -1,0 +1,7 @@
+[package]
+name = "auth"
+version = "0.1.0"
+authors = ["Oliver Bøving <oliverboving@gmail.com>"]
+
+[dependencies]
+rouille = "*"

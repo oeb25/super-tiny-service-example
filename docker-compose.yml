@@ -1,0 +1,24 @@
+version: '2'
+services:
+  posts:
+    build: ./posts
+    volumes:
+      - ./posts/app:/app
+  users:
+    build: ./users
+    volumes:
+      - ./users/app:/app
+  auth:
+    build: ./auth
+    volumes:
+      - ./auth/app:/app
+  caddy:
+    build: ./caddy
+    volumes:
+      - ./caddy/Caddyfile:/etc/Caddyfile
+    depends_on:
+      - users
+      - posts
+      - auth
+    ports:
+     - 8080:80
