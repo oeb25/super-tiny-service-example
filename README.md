@@ -20,13 +20,13 @@ goat
 To build specific services use the provided build scripts like so
 
 ```bash
-./build-go users
+./build-go.sh users
 ```
 
 To build for release append `release` to previous command like so
 
 ```bash
-./build-go users release
+./build-go.sh users release
 ```
 
 To build Rust services the `x86_64-unknown-linux-gnu` target,
