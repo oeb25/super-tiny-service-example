@@ -1,5 +1,7 @@
 # Super tiny service example
 
+A service example using Caddy as proxy all running in tiny precompiled Docker containers.
+
 ## Requirements
 
 - Docker & docker-compose
